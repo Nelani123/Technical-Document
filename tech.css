@@ -1,0 +1,105 @@
+#navbar {
+    padding: 30px;
+  }  
+  
+  #navbar header {
+   font-size: 36px;
+    font-weight: bold;
+  }
+  
+  #navbar ul {
+    padding: 0;
+  }
+  
+  #navbar li {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  #navbar a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #777;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px; 
+  }
+  
+  #navbar a:hover {
+    color: blue;
+    background: lightblue;
+  }
+  
+  #main-doc {
+    display: grid;
+    grid-template: 
+      [row1-start] "header main" 1fr [row1-end]
+      [row2-start] "footer footer" 1fr [row2-end] 
+      /400px auto;
+  }
+  
+  #navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  
+  .nav-container {
+    grid-area: header;
+    border: 1px solid #ecf7fe;
+  
+  }
+  
+  .section-container {
+    grid-area: main;
+    section-container: #e7eff8;
+  }
+  
+  .main-section {
+    width: 80%;
+    padding: 50px 30px;
+    margin: 20px auto 30px;
+    border: 1px solid #ecF7fe;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.2);
+  }
+  
+  .main-section>header {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .main-section p {
+    color: #333;
+  }
+  
+  .main-section li {
+    color: #333;
+    font-size: 16px;
+    margin: bottom 10px;
+  }
+  
+  code {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #ccc;
+    font-size: 14px;
+    padding: 10px;
+    font-family: "Courier New"; 
+  }
+  
+  @media (max-width: 600px) {
+    #main-doc{
+      grid-template-columns: auto;
+      grid-template-rows: 500px 1fr;
+      grid-template-areas: 
+        "header"
+        "main"
+  }
+     #nav-container {
+      position: relative;
+    }
+  }
